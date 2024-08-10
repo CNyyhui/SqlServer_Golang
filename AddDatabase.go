@@ -12,14 +12,14 @@ const ()
 
 func add_databases() {
 	// 打开数据库连接
-	db, err := sql.Open("sqlserver", connString)
+	db, err := sql.Open("sqlserver", connectString)
 	if err != nil {
 		log.Fatal("Error creating connection pool: ", err.Error())
 	}
 	defer db.Close()
 
 	// 创建表
-	createTableSQL := `CREATE TABLE TestTable (
+	createTableSQL := `CREATE TABLE TestTable000 (
 						ID INT PRIMARY KEY,
 						Name NVARCHAR(50) NOT NULL,
 						Job NVARCHAR(10)

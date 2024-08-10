@@ -8,7 +8,7 @@ import (
 
 func Update_Data() {
 	// 打开数据库连接
-	db, err := sql.Open("sqlserver", connString)
+	db, err := sql.Open("sqlserver", connectString)
 	if err != nil {
 		log.Fatal("Error creating connection pool: ", err.Error())
 	}
@@ -21,5 +21,4 @@ func Update_Data() {
 		log.Fatal("Error updating data: ", err.Error())
 	}
 	fmt.Println("Data updated!")
-
 }
